@@ -1,0 +1,128 @@
+<header class="app-header navbar">
+  <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="#">
+      <img class="navbar-brand-full" src="/src/img/brand/asco.jpg" width="89" height="30" alt="CoreUI Logo">
+      <img class="navbar-brand-minimized" src="/src/img/brand/asco.jpg" width="30" height="30" alt="CoreUI Logo">
+    </a>
+  </a>
+  <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <ul class="nav navbar-nav d-md-down-none">
+    <li class="nav-item px-3">
+      <a class="nav-link" href="/dashboard">
+        <i class="nav-icon icon-speedometer"></i> Dashboard
+      </a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" (click)="patients()">
+        <i class="nav-icon icon-people"></i> Patient</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" (click)="medicalAids()">
+        <i class="nav-icon icon-briefcase"></i> Medical Aid</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" (click)="medicine()">
+        <i class="nav-icon icon-docs"></i> Medicine</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" (click)="doctor()">
+        <i class="nav-icon icon-magnifier"></i> Doctors</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" (click)="hospitals()">
+        <i class="nav-icon icon-plus"></i> Hospitals</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" (click)="payments()">
+        <i class="nav-icon icon-credit-card"></i> Payments
+      </a>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        <img class="img-avatar" src="/src/img/avatars/6.jpg" alt="soso@gmail.com">
+      </a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <div class="dropdown-header text-center">
+          <strong>Account</strong>
+        </div>
+        <a class="dropdown-item" href="#">
+          <i class="fa fa-user"></i> Profile</a>
+        <a class="dropdown-item" href="#">
+          <i class="fa fa-lock"></i> Logout</a>
+      </div>
+    </li>
+  </ul>
+</header>
+<div class="app-body">
+  <div class="sidebar">
+    <nav class="sidebar-nav">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">
+            <i class="nav-icon icon-speedometer"></i> Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="patients()">
+            <i class="nav-icon icon-people"></i> Patient</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="medicalAids()">
+            <i class="nav-icon icon-briefcase"></i> Medical Aid</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="medicine()">
+            <i class="nav-icon icon-docs"></i> Medicine</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="doctor()">
+            <i class="nav-icon icon-credit-card"></i> Doctors
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="hospitals()">
+            <i class="nav-icon icon-credit-card"></i> Hospitals
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="payments()">
+            <i class="nav-icon icon-credit-card"></i> Payments
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+  </div>
+  <main class="main">
+    <!-- Breadcrumb-->
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">Home</li>
+    </ol>
+    <div class="container-fluid">
+      <div class="animated fadeIn">
+        <p *ngIf="viewDoctor">
+          <app-view-doctor ></app-view-doctor>
+        </p>
+        <p *ngIf="viewPatients">
+          <app-view-patients></app-view-patients>
+        </p>
+        <p *ngIf="viewMedicalAids">
+          <app-view-mediacal-aid></app-view-mediacal-aid>
+        </p>
+        <p *ngIf="viewMedicine">
+          <app-view-medicine></app-view-medicine>
+        </p>
+        <p *ngIf="viewHospitals">
+          <app-view-hospitals></app-view-hospitals>
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
