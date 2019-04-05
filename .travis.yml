@@ -20,7 +20,6 @@ cache:
 script:
   - ng lint
   - ng test --watch false
-  - ng build
   - ng build --prod
 
 deploy:
