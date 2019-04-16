@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewDoctorComponent } from './view-doctor.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('ViewDoctorComponent', () => {
   let component: ViewDoctorComponent;
@@ -8,7 +9,8 @@ describe('ViewDoctorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ViewDoctorComponent ]
+      declarations: [ ViewDoctorComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));

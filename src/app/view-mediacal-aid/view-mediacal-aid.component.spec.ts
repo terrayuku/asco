@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewMediacalAidComponent } from './view-mediacal-aid.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('ViewMediacalAidComponent', () => {
   let component: ViewMediacalAidComponent;
@@ -8,7 +9,8 @@ describe('ViewMediacalAidComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ViewMediacalAidComponent ]
+      declarations: [ ViewMediacalAidComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
